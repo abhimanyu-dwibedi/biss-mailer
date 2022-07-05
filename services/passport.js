@@ -23,22 +23,20 @@ passport.use(
       proxy: true,
     },
     async (accessToken, refreshToekn, profile, done) => {
-      await User.findOne({
+      let exsistinguser = await User.findOne({
         googleId: profile.id,
-      }).then(async (exsistinguser) => {
-        if (exsistinguser) {
-          // we have the record
-          done(null, exsistinguser);
-        } else {
-          // we dont have the id
-          const user = await User.create({
-            googleId: profile.id,
-          });
-          done(null, user);
-        }
       });
 
-      console.log(user);
+      if (exsistinguser) {
+        // we have the record
+        done(null, exsistinguser);
+      } else {
+        // we dont have the id
+        const user = await User.create({
+          googleId: profile.id,
+        });
+        done(null, user);
+      }
     }
   )
 );

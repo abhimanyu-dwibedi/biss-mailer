@@ -3,4 +3,6 @@ module.exports = {
   googleClientSecret: process.env.googleClientSecret,
   dburi: process.env.dburi,
   cookiekey: process.env.cookiekey,
+  stripePk: process.env.stripe_Pk,
+  stripeSk: process.env.stripe_Sk,
 };
