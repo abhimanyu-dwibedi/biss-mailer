@@ -1,7 +1,7 @@
 import { FETCH_USER } from "../actions/type";
 
 export default function (state = {}, action) {
-  console.log(action);
+  // console.log(action);
 
   switch (action.type) {
     case FETCH_USER:

@@ -4,6 +4,7 @@ const requirelogin = require("../utility/requireLogin");
 const stripe = require("stripe")(keys.stripeSk);
 module.exports = (app) => {
   app.post("/api/stripe", requirelogin, async (req, res) => {
+    console.log("hi");
     try {
       const charge = await stripe.charges.create({
         amount: 2000,

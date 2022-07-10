@@ -6,7 +6,10 @@ import { connect } from "react-redux";
 import * as actions from "./actions";
 import Header from "./components/Header";
 import Landing from "./components/Landing";
-
+import Dashbord from "./components/Dashbord";
+import { useNavigate } from "react-router-dom";
+import SurveyNew from "./components/SurveyNew";
+import SurveyNewcomp from "./components/SurveyNewcomp";
 const Dash = () => {
   <h2>dash</h2>;
 };
@@ -15,6 +18,7 @@ class App extends Component {
   componentDidMount() {
     this.props.fetchUser();
   }
+
   render() {
     return (
       <div className='container'>
@@ -22,8 +26,8 @@ class App extends Component {
           <Header />
           <Routes>
             <Route path='/' element={<Landing />} />
-            <Route path='/surveys' element={<Dash />} />
-            <Route path='/surveys/new' element={<Dash />} />
+            <Route path='/surveys' element={<Dashbord />} />
+            <Route path='/surveys/new' element={<SurveyNewcomp />} />
           </Routes>
         </BrowserRouter>
       </div>

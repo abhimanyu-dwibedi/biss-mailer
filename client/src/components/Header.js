@@ -18,10 +18,10 @@ class Header extends Component {
           <li key='1'>
             <Payments />
           </li>,
+          <li key='3'>Credits:{this.props.auth.credits}</li>,
           <li key='2'>
             <a href='/api/logout'>logout</a>
           </li>,
-          <li key='3'>Credits:{this.props.auth.credits}</li>,
         ];
     }
   }
@@ -30,14 +30,14 @@ class Header extends Component {
     console.log(this.props);
     return (
       <nav>
-        <div className='nav-wrapper'>
+        <div className='nav-wrapper blue round'>
           <Link
             to={this.props.auth ? "/surveys" : "/"}
-            className='brand-logo right'
+            className='brand-logo left'
           >
             BUSS-MAILER
           </Link>
-          <ul id='nav-mobile' className='left hide-on-med-and-down'>
+          <ul id='nav-mobile' className='right hide-on-med-and-down'>
             {this.renderContent()}
           </ul>
         </div>
