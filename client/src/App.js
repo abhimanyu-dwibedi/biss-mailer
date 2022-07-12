@@ -10,6 +10,7 @@ import Dashbord from "./components/Dashbord";
 import { useNavigate } from "react-router-dom";
 import SurveyNew from "./components/SurveyNew";
 import SurveyNewcomp from "./components/SurveyNewcomp";
+import "./App.css";
 const Dash = () => {
   <h2>dash</h2>;
 };
@@ -21,7 +22,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className='container'>
+      <div className='container '>
         <BrowserRouter>
           <Header />
           <Routes>

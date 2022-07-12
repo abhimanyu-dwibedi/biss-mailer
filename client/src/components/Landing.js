@@ -1,12 +1,17 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import "./Landing.css";
 const Landing = () => {
   return (
-    <div>
-      <h1>Emaily</h1>
-      <h4>
-        <i>your every client is our concern</i>
-      </h4>
+    <div class='con'>
+      <h1 className='dar'> YOUR CLIENT IS OUR CLIENT TOO</h1>
+      <h2>DIVE IN AN EXPLORE</h2>
+      <Link to='/surveys'>
+        <button className='btn waves-effect waves-light btn-large dar'>
+          EXPLORE
+          <i class='material-icons'>navigation</i>
+        </button>
+      </Link>
     </div>
   );
 };

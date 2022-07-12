@@ -1,6 +1,7 @@
 import _ from "lodash";
 import React from "react";
 import { connect } from "react-redux";
+import "./SurveyReview.css";
 // import { withRouter } from "react-router";
 // import { useLinkClickHandler, useNavigate } from "react-router-dom";
 import * as actions from "../actions";
@@ -16,13 +17,13 @@ const SurveyReview = ({ onCancel, submitSurvey, formValues, navigate }) => {
     // console.log(.name);
     return (
       <div key={field.name}>
-        <label>{field.label}</label>
+        <label className='black'>{field.label}</label>
         <div>{formValues[field.name]}</div>
       </div>
     );
   });
   return (
-    <div>
+    <div className='cont'>
       <h5> please conform</h5>
       {reviewfield}
       <button className='yellow darken-3 btn-flat' onClick={onCancel}>

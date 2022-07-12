@@ -10,7 +10,9 @@ class Header extends Component {
       case false:
         return (
           <li>
-            <a href='/auth/google'>Login with google</a>
+            <a href='/auth/google'>
+              Login with google<i className='large material-icons'>person</i>
+            </a>
           </li>
         );
       default:
